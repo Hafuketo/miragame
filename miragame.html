@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div id="topText">
+		<h1></h1> <!-- Removed the congratulations text for now -->
+	</div>
+	<div id="gameScreen">
+		
+<!-- [] Full screen messages [] -->
+
+		<div id="A1L1Screen"><p>Story</p>
+			<p>While searching for the lost golden pumpkin, mira had followed in the footsteps of the old pirate Donahew.</p>
+			<p>Now, she has entered the silkwood, where his old manor is rumored to be located. 
+				Stories say that both the forest and the house is haunted.</p>
+			<button id="A1L1Button" onclick="A1L1CloseMsg()">Continue</button>
+			
+		</div>
+
+		<div id="introScreen">
+			<button id="introButton" onclick="startGame()">Start</button>
+			<p>Version 1.0</p>
+			<p>© HAFFUPAFFU  2020</p>
+			
+		</div>
+
+		<div id="A1L2Screen">
+			<p>After walking for some time, mira reached a small house...</p>
+			<div><img src="images/yellow_door.png"></div>
+			<button id="A1L2Button" onclick="A1L2CloseMsg()">Continue</button>
+		</div>
+
+		<div id="A1L3Screen">
+			<p>A little bit later Mira notices some weird plants. They looks toxic...</p>
+			<div><img src="images/world/poison_plant.png"></div>
+			<button id="A1L3Button" onclick="A1L3CloseMsg()">Continue</button>
+		</div>
+
+		<div id="A1L4Screen">
+			<p>The forest is getting thicker and there are more dangerous plants around...</p>
+			<div><img src="images/world/poison_plant.png"><img src="images/world/poison_plant.png"><img src="images/world/poison_plant.png"></div>
+			<button id="A1L4Button" onclick="A1L4CloseMsg()">Continue</button>
+		</div>
+
+		<div id="A1L5Screen">
+			<p>There it is! The old pirate Donahew's house! But Mira notices that she is not alone. 
+				A band of thieves seem to be lurking around...</p>
+			<div><img src="images/red_npc.png"></div>
+			<button id="A1L5Button" onclick="A1L5CloseMsg()">Continue</button>
+		</div>
+
+		<div id="A2L1Screen">
+			<p>Mira snuck in through the window of the lounge room next to the vestibule. 
+				She hears the voices of the ruffians, laughing and talking. Where could the treasure be?</p>
+			<div><img src="images/red_npc.png"> <img src="images/green_npc.png"> <img src="images/purple_npc.png"></div>
+			<button id="A2L1Button" onclick="A2L1CloseMsg()">Continue</button>
+		</div>
+
+		<div id="A2L2Screen">
+			<p>With no luck on the first floor Mira goes up the stairs. 
+				After reaching the second floor she sees a bunch of doors leading to different rooms...</p>
+			<div><img src="images/interior/organ_1.png"><img src="images/interior/organ_2.png"></div>
+			<div><img src="images/interior/organ_3.png"><img src="images/interior/organ_4.png"></div>
+			<button id="A2L2Button" onclick="A2L2CloseMsg()">Continue</button>
+		</div>
+
+		<div id="A2L3Screen">
+			<p>After going into the master bedroom Mira found a Secret entrance inside a chest! 
+				It leads down a long ladder and into the basement...</p>
+			<button id="A2L2Button" onclick="A2L3CloseMsg()">Continue</button>
+		</div>
+
+		<div id="A3L1Screen">
+			<p>A3L1Screen</p>
+			<button id="A3L1Button" onclick="A3L1CloseMsg()">Continue</button>
+		</div>
+
+		<div id="endScreen2">
+			<p>...Anyways, I found that the real treasure was the friends I made on all of my adventures. 
+				Maybe I will give the map to my men..."</p>
+			<p>And so, Mira left the mansion with the map.</p>
+			<p>To be continued...</p>
+			<button id="restartButton" onclick="restartGame()">Restart Game</button>
+		</div>
+
+		<div id="endScreen1"><p>You did it!</p>
+			<p>Iside the chest is... Wait? What is this? This is not the golden pumpkin. 
+				Mira finds a map and an old diary. The last page says: </p>
+			<p>"December 18</p>
+			<p>I never found that gallows-fodder of a treasure. 
+				The map suposedly leads to it but I never found it myself and I'm too old to be searching for treasure...</p>
+			<button id="endContinueButton" onclick="endingContinue()">Continue</button>
+		</div>
+
+<!-- [] Full screen messages end [] -->
+
+<!-- [] Part of screen messages [] -->
+
+	<!-- [] Life messages [] -->
+	
+	<div id="lifeLostMessage">
+		<p>Mira lost a life!</p>
+		<button id="keyCloseButton" onclick="closeLostLifeMsg()">Continue</button>			
+	</div>
+
+	<div id="extraLifeMessage">
+		<p>Mira got an extra life!</p>
+		<button id="keyCloseButton" onclick="closeExtraLifeMsg()">Continue</button>			
+	</div>
+
+	<!-- [] Life messages [] -->
+
+	<!-- [] Found keys messages [] -->
+
+		<div id="keyYellowMessage">
+			<p>You found a key!</p>
+			<div><img src="images/yellow_key.png"></div>
+			<button id="keyCloseButton" onclick="closeYellowKeyMsg()">Continue</button>
+		</div>
+
+		<div id="keyBlueMessage">
+			<p>You found a key!</p>
+			<div><img src="images/blue_key.png"></div>
+			<button id="keyCloseButton" onclick="closeBlueKeyMsg()">Continue</button>
+		</div>
+
+		<div id="keyGreenMessage">
+			<p>You found a green strawberry!</p>
+			<div><img src="images/green_key.png"></div>
+			<button id="keyCloseButton" onclick="closeGreenKeyMsg()">Continue</button>
+		</div>
+
+		<div id="keyRedMessage">
+			<p>You found a red strawberry!</p>
+			<div><img src="images/red_key.png"></div>
+			<button id="keyCloseButton" onclick="closeRedKeyMsg()">Continue</button>
+		</div>
+
+	<!-- [] Found keys messages end [] -->
+
+	<!-- [] Opening door/Interaction messages [] -->
+
+		<div id="greenNpcMessage">
+			<p>"I'm so hungry! could you give me something to eat?"</p>
+			<div><img src="images/green_key.png"></div>
+			<button id="keyCloseButton" onclick="closeGreenNpcMsg()">Continue</button>			
+		</div>
+
+		<div id="redNpcMessage">
+			<p>"I'm so hungry! could you give me something to eat?"</p>
+			<div><img src="images/red_key.png"></div>
+			<button id="keyCloseButton" onclick="closeRedNpcMsg()">Continue</button>			
+		</div>
+
+		<div id="purpleNpcMessage">
+			<p>"I'm so hungry! could you give me something to eat?"</p>
+			<div><img src="images/red_key.png"> or <img src="images/green_key.png"></div>
+			<button id="keyCloseButton" onclick="closePurpleNpcMsg()">Continue</button>			
+		</div>
+
+		<div id="thiefMessage">
+			<p>"..."</p>
+			<p>The thief will steal your items!</p>
+			<div><img src="images/yellow_key.png"> <img src="images/blue_key.png"> <img src="images/green_key.png"> <img src="images/red_key.png"></div>
+			<button id="keyCloseButton" onclick="closeThiefMsg()">Continue</button>			
+		</div>
+		
+		<div id="yellowDoorMessage">
+			<p>To unlock this door you need a yellow key</p>
+			<div><img src="images/yellow_key.png"></div>
+			<button id="keyCloseButton" onclick="closeYellowDoorMsg()">Continue</button>			
+		</div>
+
+		<div id="blueDoorMessage">
+			<p>To unlock this door you need a blue key</p>
+			<div><img src="images/blue_key.png"></div>
+			<button id="keyCloseButton" onclick="closeBlueDoorMsg()">Continue</button>			
+		</div>
+
+		<div id="purpleDoorMessage">
+			<p>To unlock this door you need a blue or yellow key</p>
+			<div><img src="images/blue_key.png"> or <img src="images/yellow_key.png"></div>
+			<button id="keyCloseButton" onclick="closePurpleDoorMsg()">Continue</button>			
+		</div>
+
+	<!-- [] Opening door/Interaction messages end[] -->	
+
+<!-- [] Part of screen messages end [] -->
+
+<!-- [] Game Screen [] -->
+
+		<canvas id="gameCanvas" width="544" height="512"></canvas>
+
+<!-- [] Game Screen end [] -->
+
+<!-- [] Controls [] -->
+<div id=controlGrid>
+	<div id="noBtn">NO</div>
+	<div id="upBtn"><img src="images/arrow_up.png"></div>
+	<div id="noBtn">NO</div>
+	<div id="leftBtn"><img src="images/arrow_left.png"></div>
+	<div id="midBtn"><img src="images/arrow_middle.png"></div>
+	<div id="rightBtn"><img src="images/arrow_right.png"></div>
+	<div id="noBtn">NO</div>
+	<div id="downBtn"><img src="images/arrow_down.png"></div>
+	<div id="noBtn">NO</div>
+</div>
+	
+	<!-- [] Controls [] -->
+
+<!-- [] HUD things [] -->
+
+		<p id="yellowKeyText" class="hudNumbers">Yellow key count will be displayed here</p>
+		<p id="blueKeyText" class="hudNumbers">Blue key count will be displayed here</p>
+		<p id="greenKeyText" class="hudNumbers">Green key count will be displayed here</p>
+		<p id="redKeyText" class="hudNumbers">Red key count will be displayed here</p>
+		<p id="livesText" class="hudNumbers">Lives count will be displayed here</p>
+		<p id="currentLevel" class="hudNumbers">Current level will be displayed here</p>
+
+		<div id="resetButton" onclick="restartLevel()"></div>
+
+<!-- [] HUD things end [] -->
+		
+	
+		<script src="js/GraphicsCommon.js"></script>
+		<script src="js/ImageLoading.js"></script>
+		<script src="js/Levels.js"></script>
+		<script src="js/World.js"></script>
+		<script src="js/Mira.js"></script>
+		<script src="js/Input.js"></script>
+		<script src="js/Story.js"></script>
+		<script src="js/Main.js"></script>
+	</div>
+</body>
+</html>

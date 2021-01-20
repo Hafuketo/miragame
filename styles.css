@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "Pixel NES";
+  src: url("./pixel_nes/Pixel_NES.eot?") format("eot"),
+    url("./pixel_nes/Pixel_NES.woff") format("woff"),
+    url("./pixel_nes/Pixel_NES.ttf") format("truetype"),
+    url("./pixel_nes/Pixel_NES.svg#PixelNES") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(to right, purple, teal);
+  font-family: "Pixel NES";
+  padding: 0;
+  margin: 0;
+  touch-action: manipulation;
+  image-rendering: pixelated;
+
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+}
+
+img {
+  pointer-events: none;
+}
+p {
+  font-size: 21px;
+}
+button {
+  font-family: "Pixel NES";
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#topText {
+  margin-top: 4%;
+  height: 70px;
+
+  text-align: center;
+}
+
+#gameScreen {
+  margin: auto;
+  position: relative;
+  width: 544px;
+  border: 15px solid rgb(75, 62, 37);
+  border-radius: 2%;
+  background: rgb(75, 62, 37);
+}
+
+.hudNumbers {
+  position: absolute;
+  font-size: 21px;
+  left: 482px;
+  z-index: 0;
+  color: white;
+}
+
+#currentLevel {
+  top: 37px;
+}
+
+#livesText {
+  top: 100px;
+}
+
+#yellowKeyText {
+  top: 165px;
+}
+
+#blueKeyText {
+  top: 229px;
+}
+
+#greenKeyText {
+  top: 293px;
+}
+
+#redKeyText {
+  top: 357px;
+}
+
+#gamecanvas {
+  z-index: -1;
+}
+
+/* Screens and Messages */
+
+#introScreen,
+#A1L1Screen,
+#A1L2Screen,
+#A1L3Screen,
+#A1L4Screen,
+#A1L5Screen,
+#A2L1Screen,
+#A2L2Screen,
+#A2L3Screen,
+#A3L1Screen,
+#endScreen1,
+#endScreen2,
+#keyYellowMessage,
+#keyBlueMessage,
+#keyGreenMessage,
+#keyRedMessage,
+#greenNpcMessage,
+#redNpcMessage,
+#purpleNpcMessage,
+#thiefMessage,
+#yellowDoorMessage,
+#blueDoorMessage,
+#purpleDoorMessage,
+#lifeLostMessage,
+#extraLifeMessage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Starts visible */
+/*#introScreen {
+  display: none; 
+}*/
+
+/* All messages should be hidden until made seen through JS */
+#A1L2Screen,
+#A1L3Screen,
+#A1L4Screen,
+#A1L5Screen,
+#A2L1Screen,
+#A2L2Screen,
+#A2L3Screen,
+#A3L1Screen,
+#keyYellowMessage,
+#keyBlueMessage,
+#keyGreenMessage,
+#keyRedMessage,
+#greenNpcMessage,
+#redNpcMessage,
+#purpleNpcMessage,
+#thiefMessage,
+#endScreen1,
+#endScreen2,
+#yellowDoorMessage,
+#blueDoorMessage,
+#purpleDoorMessage,
+#lifeLostMessage,
+#extraLifeMessage {
+  display: none;
+}
+
+/* Full screen Messages */
+#introScreen,
+#lifeLostMessage,
+#extraLifeMessage,
+#A1L1Screen,
+#A1L2Screen,
+#A1L3Screen,
+#A1L4Screen,
+#A1L5Screen,
+#A2L1Screen,
+#A2L2Screen,
+#A2L3Screen,
+#A3L1Screen,
+#endScreen1,
+#endScreen2 {
+  background-color: black;
+  padding: 25px;
+  width: 494px;
+  height: 462px;
+  text-align: center;
+}
+
+/* Part of screen messges */
+
+#keyYellowMessage,
+#keyBlueMessage,
+#keyGreenMessage,
+#keyRedMessage,
+#greenNpcMessage,
+#redNpcMessage,
+#purpleNpcMessage,
+#thiefMessage,
+#yellowDoorMessage,
+#blueDoorMessage,
+#purpleDoorMessage {
+  margin-top: 158px;
+  width: 544px;
+  height: 180px;
+  text-align: center;
+  background-color: blue;
+}
+
+#introScreen {
+  background-image: url("./images/intro_screen.png");
+}
+
+#endScreen1,
+#endScreen2 {
+  background-color: gold;
+}
+
+#keyYellowMessage,
+#keyBlueMessage,
+#keyGreenMessage,
+#keyRedMessage {
+  background-color: yellow;
+}
+
+#greenNpcMessage,
+#redNpcMessage,
+#purpleNpcMessage,
+#thiefMessage,
+#yellowDoorMessage,
+#blueDoorMessage,
+#purpleDoorMessage {
+  background-color: purple;
+}
+
+/* Buttons */
+
+#introButton {
+  margin-top: 330px;
+  margin-bottom: 20px;
+}
+
+#A1L1Button,
+#A1L2Button,
+#A1L3Button,
+#A1L4Button,
+#A1L5Button,
+#A2L1Button,
+#A2L2Button,
+#A2L3Button,
+#A3L1Button,
+#restartButton {
+  margin-top: 30px;
+}
+
+#keyCloseButton {
+  margin-top: 20px;
+}
+
+#introButton:hover,
+#A1L1Button:hover,
+#A1L2Button:hover,
+#A1L3Button:hover,
+#A1L4Button:hover,
+#A1L5Button:hover,
+#A2L1Button:hover,
+#A2L2Button:hover,
+#A2L3Button:hover,
+#A3L1Button:hover,
+#endContinueButton:hover,
+#restartButton:hover,
+#keyCloseButton:hover {
+  background-color: purple;
+  color: white;
+}
+
+#resetButton {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-image: url("./images/reset_btn.png");
+  position: absolute;
+  top: 448px;
+  left: 448px;
+  z-index: 0;
+}
+#resetButton:hover {
+  background-image: url("./images/reset_hover.png");
+}
+
+/* Game control buttons */
+
+#controlGrid {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+}
+
+#noBtn {
+  visibility: hidden;
+  cursor: default;
+}
+
+#upBtn,
+#leftBtn,
+#rightBtn,
+#downBtn {
+  cursor: pointer;
+}
+#upBtn:active,
+#leftBtn:active,
+#rightBtn:active,
+#downBtn:active {
+  background-color: white;
+}
+#midBtn {
+}
