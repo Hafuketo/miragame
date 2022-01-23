@@ -9,4 +9,4 @@ I am currently doing a class on git and Github and one of the tasks were to crea
 # Svar på frågan
 ## "Vilket kommando behöver jag använda i terminalen/kommandoprompten för att klona ditt repository till min dator?"
 
-git clone 
+git clone https://github.com/Hafuketo/miragame.git
